@@ -1,0 +1,43 @@
+.apView{
+    -fx-background-color: #ff0000;
+}
+.btnView{
+    -fx-background-color: none;
+}
+.tfPesquisaPokemon{
+    -fx-background-color: none;
+    -fx-font-weight: bold;
+    -fx-text-fill: #646464;
+    -fx-prompt-text-fill: #646464;
+}
+.lbError{
+    -fx-font-weight: bold;
+}
+.btnOpc{
+    -fx-background-color: #959595;
+    -fx-text-fill: #ffffff;
+}
+.pbStatus .bar{
+    -fx-background-color: #2092ef;
+}
+.pbStatus .track{
+    -fx-background-color: none;
+}
+.Slider .track{
+    -fx-background-color: #2092ef;
+    -fx-background-radius: 8px;
+    -fx-pref-height: 16px;
+}
+.Slider .thumb {
+    -fx-background-color: #ff0000;
+    -fx-background-radius: 100%;
+    -fx-pref-height: 24px;
+    -fx-pref-width: 24px;
+}
+.tfSliders{
+    -fx-background-color: none;
+    -fx-prompt-text-fill: #000;
+}
+.smbTips{
+    -fx-background-color: #fff;
+}

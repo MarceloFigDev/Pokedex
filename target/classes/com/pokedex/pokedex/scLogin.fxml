@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.ScLoginController">
+   <children>
+      <Pane layoutX="39.0" layoutY="33.0" prefHeight="512.0" prefWidth="960.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="32.0">
+         <children>
+            <Pane fx:id="pStatus" layoutX="288.0" layoutY="128.0" prefHeight="256.0" prefWidth="384.0">
+               <children>
+                  <Button alignment="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="8.0" layoutY="144.0" mnemonicParsing="false" onAction="#btnLogar" prefHeight="48.0" prefWidth="180.0" styleClass="btnOpc" stylesheets="@Styles.css" text="Logar" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="tfUser" alignment="CENTER" layoutY="32.0" onKeyPressed="#tfUserNxt" onMouseClicked="#tfUser" prefHeight="32.0" prefWidth="384.0" promptText="Usuário">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" ellipsisString="" prefHeight="32.0" prefWidth="384.0" text="Usuário" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" ellipsisString="" layoutY="64.0" prefHeight="32.0" prefWidth="384.0" text="Senha" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="pfSenha" alignment="CENTER" layoutY="96.0" onKeyPressed="#pfSenhaNxt" onMouseClicked="#pfSenha" prefHeight="32.0" prefWidth="384.0" promptText="Senha">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </PasswordField>
+                  <Button alignment="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="196.0" layoutY="144.0" mnemonicParsing="false" onAction="#btnCadastro" prefHeight="48.0" prefWidth="180.0" styleClass="btnOpc" stylesheets="@Styles.css" text="Cadastrar-se" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="CENTER" ellipsisString="" graphicTextGap="0.0" layoutY="208.0" mnemonicParsing="false" onAction="#btnVisitante" prefHeight="48.0" prefWidth="384.0" styleClass="btnOpc" stylesheets="@Styles.css" text="Continuar Como Visitante" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Label fx:id="lbErroLogin" alignment="CENTER" ellipsisString="" prefHeight="128.0" prefWidth="960.0" text="Usuário / Senha inválidos" textAlignment="CENTER" textFill="RED" visible="false">
+               <font>
+                  <Font name="Arial Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Rectangle disable="true" fill="RED" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1024.0" />
+      <Rectangle disable="true" fill="RED" height="32.0" layoutY="544.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1024.0" />
+      <Rectangle disable="true" fill="RED" height="576.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
+      <Rectangle disable="true" fill="RED" height="576.0" layoutX="992.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
+      <Polygon disable="true" fill="RED" points="-325.0, -155.0, -293.0, -187.0, -325.0, -187.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="32.0" />
+      <Polygon disable="true" fill="RED" points="-325.0, -155.0, -293.0, -187.0, -325.0, -187.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="32.0" />
+      <Polygon disable="true" fill="RED" points="-325.0, -155.0, -293.0, -187.0, -325.0, -187.0" rotate="-180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="32.0" AnchorPane.rightAnchor="32.0" />
+      <Polygon disable="true" fill="RED" points="-325.0, -155.0, -293.0, -187.0, -325.0, -187.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="32.0" />
+   </children>
+</AnchorPane>

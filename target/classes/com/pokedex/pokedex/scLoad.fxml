@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="576.0" prefWidth="1024.0" styleClass="apView" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.ScLoadController">
+   <children>
+      <Pane layoutX="77.0" layoutY="75.0" prefHeight="448.0" prefWidth="448.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="64.0">
+         <children>
+            <Rectangle fill="WHITE" height="448.0" layoutX="32.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="384.0" />
+            <Rectangle fill="WHITE" height="384.0" layoutY="32.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
+            <Rectangle fill="WHITE" height="384.0" layoutX="416.0" layoutY="32.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
+            <Polygon fill="WHITE" layoutX="67.0" layoutY="77.0" points="-67.0, -45.0, -35.0, -45.0, -35.0, -77.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Polygon fill="WHITE" layoutX="86.0" layoutY="470.0" points="-86.0, -54.0, -54.0, -22.0, -54.0, -54.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Polygon fill="WHITE" layoutX="484.0" layoutY="456.0" points="-68.0, -40.0, -68.0, -8.0, -36.0, -40.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Polygon fill="WHITE" layoutX="482.0" layoutY="55.0" points="-66.0, -23.0, -34.0, -23.0, -66.0, -55.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Label fx:id="lbBoasVindas" alignment="TOP_LEFT" layoutX="32.0" layoutY="160.0" prefHeight="256.0" prefWidth="384.0" text="Lorem Ipsum is simplydummy text of theprinting and typesettingindustry. Lorem Ipsum hasbeen the industry'sstandard dummy text eversince the 1500s, when anunknown printer took agalley of type and end." wrapText="true">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="42.0" layoutY="74.0" prefHeight="224.0" prefWidth="448.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <Rectangle fill="WHITE" height="224.0" layoutX="32.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="384.0" />
+            <Rectangle fill="WHITE" height="160.0" layoutY="32.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
+            <Rectangle fill="WHITE" height="160.0" layoutX="416.0" layoutY="32.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
+            <Polygon fill="WHITE" layoutX="67.0" layoutY="77.0" points="-67.0, -45.0, -35.0, -45.0, -35.0, -77.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Polygon fill="WHITE" layoutX="89.0" layoutY="251.0" points="-89.0, -59.0, -57.0, -27.0, -57.0, -59.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Polygon fill="WHITE" layoutX="483.0" layoutY="230.0" points="-67.0, -38.0, -67.0, -6.0, -35.0, -38.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Polygon fill="WHITE" layoutX="482.0" layoutY="55.0" points="-66.0, -23.0, -34.0, -23.0, -66.0, -55.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Pane layoutX="24.0" layoutY="24.0" prefHeight="176.0" prefWidth="400.0">
+               <children>
+                  <Button alignment="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="116.0" layoutY="121.0" mnemonicParsing="false" onAction="#btnLogar" prefHeight="48.0" prefWidth="160.0" styleClass="btnOpc" stylesheets="@Styles.css" text="Logar" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label alignment="CENTER" ellipsisString="" prefHeight="32.0" prefWidth="80.0" text="Usuário:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfUser" alignment="CENTER" layoutX="80.0" onKeyPressed="#tfUserNxt" onMouseClicked="#tfUser" prefHeight="32.0" prefWidth="320.0" promptText="Usuário">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" ellipsisString="" layoutY="67.0" prefHeight="32.0" prefWidth="80.0" text="Senha:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="pfSenha" alignment="CENTER" layoutX="80.0" layoutY="67.0" onKeyPressed="#pfSenhaNxt" onMouseClicked="#pfSenha" prefHeight="32.0" prefWidth="320.0" promptText="Senha">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </PasswordField>
+                  <Label fx:id="lbErroLogin" alignment="CENTER" ellipsisString="" layoutX="80.0" layoutY="32.0" prefHeight="35.0" prefWidth="320.0" text="Usuário / Senha inválidos" textAlignment="CENTER" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="546.0" layoutY="58.0" prefHeight="224.0" prefWidth="448.0" AnchorPane.bottomAnchor="48.0" AnchorPane.rightAnchor="40.0">
+         <children>
+            <Rectangle fill="WHITE" height="224.0" layoutX="32.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="384.0" />
+            <Rectangle fill="WHITE" height="160.0" layoutY="32.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
+            <Rectangle fill="WHITE" height="160.0" layoutX="416.0" layoutY="32.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
+            <Polygon fill="WHITE" layoutX="67.0" layoutY="77.0" points="-67.0, -45.0, -35.0, -45.0, -35.0, -77.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Polygon fill="WHITE" layoutX="89.0" layoutY="251.0" points="-89.0, -59.0, -57.0, -27.0, -57.0, -59.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Polygon fill="WHITE" layoutX="483.0" layoutY="230.0" points="-67.0, -38.0, -67.0, -6.0, -35.0, -38.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Polygon fill="WHITE" layoutX="482.0" layoutY="55.0" points="-66.0, -23.0, -34.0, -23.0, -66.0, -55.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Pane layoutX="24.0" layoutY="24.0" prefHeight="176.0" prefWidth="400.0">
+               <children>
+                  <Button alignment="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="24.0" layoutY="32.0" mnemonicParsing="false" onAction="#btnVisitante" prefHeight="48.0" prefWidth="352.0" styleClass="btnOpc" stylesheets="@Styles.css" text="Entrar Como Visitante" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="24.0" layoutY="96.0" mnemonicParsing="false" onAction="#btnCadastro" prefHeight="48.0" prefWidth="352.0" styleClass="btnOpc" stylesheets="@Styles.css" text="Fazer Cadastro" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <ImageView fitHeight="168.0" fitWidth="256.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" x="140.0">
+         <image>
+            <Image url="@img/Logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

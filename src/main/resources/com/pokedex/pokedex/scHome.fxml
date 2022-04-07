@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.ScHomeController">
+   <children>
+      <Pane layoutX="39.0" layoutY="33.0" prefHeight="512.0" prefWidth="960.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="32.0">
+         <children>
+            <Pane prefHeight="64.0" prefWidth="368.0">
+               <children>
+                  <Rectangle fill="#646464" height="96.0" layoutX="-35.0" layoutY="-32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="387.0" />
+                  <Rectangle fill="#646464" height="81.0" layoutX="352.0" layoutY="-33.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="16.0" />
+                  <Polygon fill="#646464" layoutX="400.0" layoutY="103.0" points="-48.0, -39.0, -32.0, -55.0, -48.0, -55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Button id="btnPesquisar" layoutX="320.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnPesquisar" styleClass="btnView" stylesheets="@Styles.css">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Pesquisar.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="lbErro" alignment="CENTER" layoutY="46.0" prefHeight="18.0" prefWidth="368.0" styleClass="lbError" stylesheets="@Styles.css" text="Erro" textAlignment="CENTER" textFill="RED" visible="false" />
+               </children>
+            </Pane>
+            <Pane layoutX="32.0" layoutY="14.0" prefHeight="32.0" prefWidth="288.0">
+               <children>
+                  <Polygon layoutX="366.0" layoutY="29.0" points="-94.0, -13.0, -78.0, -13.0, -94.0, -29.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Rectangle height="16.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="272.0" />
+                  <Polygon layoutX="88.0" layoutY="45.0" points="-72.0, -29.0, -72.0, -13.0, -88.0, -29.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Rectangle height="16.0" layoutX="16.0" layoutY="16.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="272.0" />
+                  <Rectangle fill="#c4c4c4" height="14.0" layoutX="2.0" layoutY="2.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="270.0" />
+                  <Polygon fill="#c4c4c4" layoutX="365.0" layoutY="30.0" points="-93.0, -14.0, -79.0, -14.0, -93.0, -28.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Rectangle fill="#c4c4c4" height="14.0" layoutX="16.0" layoutY="16.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="270.0" />
+                  <Polygon fill="#c4c4c4" layoutX="87.0" layoutY="50.0" points="-71.0, -20.0, -71.0, -34.0, -85.0, -34.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <TextField fx:id="tfPesquisaPokemon" alignment="CENTER" focusTraversable="false" layoutX="17.0" layoutY="2.0" onKeyPressed="#tfPesquisaPokemonNxt" onMouseClicked="#tfPesquisaPokemon" prefHeight="28.0" prefWidth="254.0" promptText="Nome ou número do Pokemon..." styleClass="tfPesquisaPokemon" stylesheets="@Styles.css">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font></TextField>
+               </children>
+            </Pane>
+            <Label fx:id="lbWelcome" layoutX="384.0" prefHeight="64.0" prefWidth="381.0" text="Olá, Treinador">
+               <font>
+                  <Font name="Arial Black" size="32.0" />
+               </font>
+            </Label>
+            <Pane layoutX="832.0" prefHeight="512.0" prefWidth="128.0">
+               <children>
+                  <Rectangle fill="#646464" height="576.0" layoutY="-32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="160.0" />
+                  <Button layoutX="24.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnUser" styleClass="btnView" stylesheets="@Styles.css">
+                     <graphic>
+                        <ImageView fx:id="ivUser" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/usersImg/User.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="24.0" layoutY="424.0" mnemonicParsing="false" onAction="#btnAbout" styleClass="btnView" stylesheets="@Styles.css">
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Icone.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnAddPokemon" ellipsisString="" layoutX="24.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnAddPokemon" styleClass="btnView" stylesheets="@Styles.css" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Label fx:id="lbNomeNum" alignment="CENTER" ellipsisString="" layoutY="80.0" prefHeight="32.0" prefWidth="832.0" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Label>
+            <ImageView id="imgPokemonPesquisado" fx:id="imgPokemonPesquisado" fitHeight="256.0" fitWidth="256.0" layoutX="64.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/pokeImg/ash.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lbPokedex" alignment="TOP_LEFT" ellipsisString="" layoutX="383.0" layoutY="144.0" prefHeight="352.0" prefWidth="384.0" text="Label" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font></Label>
+            <Pane fx:id="pStatus" layoutX="383.0" layoutY="144.0" prefHeight="352.0" prefWidth="384.0" visible="false">
+               <children>
+                  <Pane layoutY="176.0" prefHeight="176.0" prefWidth="384.0">
+                     <children>
+                        <Rectangle arcHeight="32.0" arcWidth="32.0" fill="#646464" height="176.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="384.0" />
+                        <ProgressBar fx:id="pbHp" layoutX="-12.0" layoutY="43.0" prefHeight="57.0" prefWidth="112.0" progress="0.31" rotate="-90.0" styleClass="pbStatus" stylesheets="@Styles.css" />
+                        <ProgressBar fx:id="pbAta" layoutX="47.0" layoutY="43.0" prefHeight="57.0" prefWidth="112.0" progress="0.76" rotate="-90.0" styleClass="pbStatus" stylesheets="@Styles.css" />
+                        <ProgressBar fx:id="pbDef" layoutX="106.0" layoutY="43.0" prefHeight="57.0" prefWidth="112.0" progress="0.48" rotate="-90.0" styleClass="pbStatus" stylesheets="@Styles.css" />
+                        <ProgressBar fx:id="pbAtaEsp" layoutX="165.0" layoutY="43.0" prefHeight="57.0" prefWidth="112.0" progress="0.61" rotate="-90.0" styleClass="pbStatus" stylesheets="@Styles.css" />
+                        <ProgressBar fx:id="pbDefEsp" layoutX="224.0" layoutY="43.0" prefHeight="57.0" prefWidth="112.0" progress="0.82" rotate="-90.0" styleClass="pbStatus" stylesheets="@Styles.css" />
+                        <ProgressBar fx:id="pbSpeed" layoutX="283.0" layoutY="43.0" prefHeight="57.0" prefWidth="112.0" progress="0.32" rotate="-90.0" styleClass="pbStatus" stylesheets="@Styles.css" />
+                        <Label alignment="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="16.0" layoutY="125.0" prefHeight="25.0" prefWidth="57.0" text="HP" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbHp" alignment="CENTER" ellipsisString="" layoutX="16.0" layoutY="139.0" prefHeight="28.0" prefWidth="57.0" text="0000" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="75.0" layoutY="125.0" prefHeight="25.0" prefWidth="57.0" text="Ataque" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbAta" alignment="CENTER" ellipsisString="" layoutX="75.0" layoutY="139.0" prefHeight="28.0" prefWidth="57.0" text="0000" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="134.0" layoutY="125.0" prefHeight="25.0" prefWidth="57.0" text="Defesa" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbDef" alignment="CENTER" ellipsisString="" layoutX="134.0" layoutY="139.0" prefHeight="28.0" prefWidth="57.0" text="0000" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="193.0" layoutY="125.0" prefHeight="25.0" prefWidth="57.0" text="Ataque Esp" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbAtaEsp" alignment="CENTER" ellipsisString="" layoutX="193.0" layoutY="139.0" prefHeight="28.0" prefWidth="57.0" text="0000" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="252.0" layoutY="125.0" prefHeight="25.0" prefWidth="57.0" text="Defesa Esp" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbDefEsp" alignment="CENTER" ellipsisString="" layoutX="252.0" layoutY="139.0" prefHeight="28.0" prefWidth="57.0" text="0000" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="311.0" layoutY="125.0" prefHeight="25.0" prefWidth="57.0" text="Velocidade" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbSpeed" alignment="CENTER" ellipsisString="" layoutX="311.0" layoutY="139.0" prefHeight="28.0" prefWidth="57.0" text="0000" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="176.0" prefWidth="384.0">
+                     <children>
+                        <Label ellipsisString="" prefHeight="32.0" prefWidth="64.0" text="Tipo" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label ellipsisString="" layoutY="64.0" prefHeight="32.0" prefWidth="128.0" text="Fraquezas" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="pTip1" layoutY="32.0" prefHeight="32.0" prefWidth="128.0">
+                           <children>
+                              <Rectangle fx:id="recTip1" arcHeight="32.0" arcWidth="32.0" fill="DODGERBLUE" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="128.0" />
+                              <Label fx:id="lbTip1" alignment="CENTER" ellipsisString="" prefHeight="32.0" prefWidth="128.0" text="Tipo">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pTip2" layoutX="132.0" layoutY="32.0" prefHeight="32.0" prefWidth="128.0">
+                           <children>
+                              <Rectangle fx:id="recTip2" arcHeight="32.0" arcWidth="32.0" fill="DODGERBLUE" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="128.0" />
+                              <Label fx:id="lbTip2" alignment="CENTER" ellipsisString="" prefHeight="32.0" prefWidth="128.0" text="Tipo">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pFra1" layoutX="-4.0" layoutY="96.0" prefHeight="32.0" prefWidth="128.0">
+                           <children>
+                              <Rectangle fx:id="recFra1" arcHeight="32.0" arcWidth="32.0" fill="DODGERBLUE" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="128.0" />
+                              <Label fx:id="lbFra1" alignment="CENTER" ellipsisString="" prefHeight="32.0" prefWidth="128.0" text="Fraqueza">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pFra2" layoutX="128.0" layoutY="96.0" prefHeight="32.0" prefWidth="128.0">
+                           <children>
+                              <Rectangle fx:id="recFra2" arcHeight="32.0" arcWidth="32.0" fill="DODGERBLUE" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="128.0" />
+                              <Label fx:id="lbFra2" alignment="CENTER" ellipsisString="" prefHeight="32.0" prefWidth="128.0" text="Fraqueza">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pFra3" layoutX="260.0" layoutY="96.0" prefHeight="32.0" prefWidth="128.0">
+                           <children>
+                              <Rectangle fx:id="recFra3" arcHeight="32.0" arcWidth="32.0" fill="DODGERBLUE" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="128.0" />
+                              <Label fx:id="lbFra3" alignment="CENTER" ellipsisString="" prefHeight="32.0" prefWidth="128.0" text="Fraqueza">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pFra4b" layoutX="54.0" layoutY="132.0" prefHeight="32.0" prefWidth="128.0">
+                           <children>
+                              <Rectangle fx:id="recFra4" arcHeight="32.0" arcWidth="32.0" fill="DODGERBLUE" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="128.0" />
+                              <Label fx:id="lbFra4" alignment="CENTER" ellipsisString="" prefHeight="32.0" prefWidth="128.0" text="Fraqueza">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pFra4a" layoutX="128.0" layoutY="132.0" prefHeight="32.0" prefWidth="128.0">
+                           <children>
+                              <Rectangle fx:id="recFra4" arcHeight="32.0" arcWidth="32.0" fill="DODGERBLUE" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="128.0" />
+                              <Label fx:id="lbFra4" alignment="CENTER" ellipsisString="" prefHeight="32.0" prefWidth="128.0" text="Fraqueza">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pFra5" layoutX="186.0" layoutY="132.0" prefHeight="32.0" prefWidth="128.0">
+                           <children>
+                              <Rectangle fx:id="recFra5" arcHeight="32.0" arcWidth="32.0" fill="DODGERBLUE" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="128.0" />
+                              <Label fx:id="lbFra5" alignment="CENTER" ellipsisString="" prefHeight="32.0" prefWidth="128.0" text="Fraqueza">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children></Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Rectangle disable="true" fill="RED" height="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1024.0" />
+      <Rectangle disable="true" fill="RED" height="32.0" layoutY="544.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1024.0" />
+      <Rectangle disable="true" fill="RED" height="576.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
+      <Rectangle disable="true" fill="RED" height="576.0" layoutX="992.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
+      <Polygon disable="true" fill="RED" points="-325.0, -155.0, -293.0, -187.0, -325.0, -187.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="32.0" />
+      <Polygon disable="true" fill="RED" points="-325.0, -155.0, -293.0, -187.0, -325.0, -187.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="32.0" />
+      <Polygon disable="true" fill="RED" points="-325.0, -155.0, -293.0, -187.0, -325.0, -187.0" rotate="-180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="32.0" AnchorPane.rightAnchor="32.0" />
+      <Polygon disable="true" fill="RED" points="-325.0, -155.0, -293.0, -187.0, -325.0, -187.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="32.0" />
+   </children>
+</AnchorPane>
